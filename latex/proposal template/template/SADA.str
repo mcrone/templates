@@ -1,0 +1,71 @@
+% **********************************************
+% *                                            *
+% *    String definitions for SADA.sty         *
+% *                                            *
+% **********************************************
+%
+% FILENAME:   SADA.str
+%
+% ABSTRACT:   Language dependent strings of SADA.sty are set here.
+%
+% USAGE:      Used by SADA.sty
+%
+% EXCEPTIONS: -
+%
+% HISTORY:    Written by Mathias Staeger, April 15, 2002.
+%
+%*****************************************************************
+
+%
+% THE GENERIC DASA-COMMANDS
+%
+\def\laboratory#1{\def\laboratorystring{#1}}
+\def\laboratorystring{}
+\def\professor#1{\def\professorstring{#1}}
+\def\professorstring{}
+\def\period#1{\def\periodstring{#1}}
+\def\periodstring{}
+\def\dasatype#1{\def\dasatypestring{#1}}
+\def\dasatypestring{}
+\def\students#1{\def\studentstring{#1}}
+\def\studentstring{}
+\def\mainreader#1{\def\mainreaderstring{#1}}
+\def\mainreaderstring{}
+\def\mainreaderprefix#1{\def\mainreaderprefixstring{#1}}
+\def\mainreaderprefixstring{}
+\def\alternatereader#1{\def\alternatereaderstring{#1}}
+\def\alternatereaderstring{}
+\def\alternatereaderprefix#1{\def\alternatereaderprefixstring{#1}}
+\def\alternatereaderprefixstring{}
+\def\issuedate#1{\def\issuedatestring{#1}}
+\def\issuedatestring{}
+\def\issuedateprefix#1{\def\issuedateprefixstring{#1}}
+\def\issuedateprefixstring{}
+\def\submissiondate#1{\def\submissiondatestring{#1}}
+\def\submissiondatestring{}
+\def\submissiondateprefix#1{\def\submissiondateprefixstring{#1}}
+\def\submissiondateprefixstring{}
+\def\title#1{\def\titlestring{#1}}
+\def\titlestring{}
+\def\dateprefix#1{\def\dateprefixstring{#1}}
+\def\dateprefixstring{}
+
+%
+% THE LANGUAGE DEPENDENT STRINGS
+%
+\ifenglish \mainreaderprefix{Main Reader:} \fi
+\ifgerman  \mainreaderprefix{Betreuer:} \fi
+\ifenglish \alternatereaderprefix{Alternate Reader:} \fi
+\ifgerman  \alternatereaderprefix{Stellvertreter:} \fi
+
+\ifenglish \issuedateprefix{Issue Date:} \fi
+\ifgerman  \issuedateprefix{Ausgabe:} \fi
+\ifenglish \submissiondateprefix{Submission Date:} \fi
+\ifgerman  \submissiondateprefix{Abgabe:} \fi
+
+\ifenglish \dateprefix{} \fi
+\ifgerman  \dateprefix{Z\"urich, den} \fi
+
+\ifenglish \laboratory{Electronics Laboratory} \fi
+\ifgerman  \laboratory{Institut f\"ur Elektronik} \fi
+

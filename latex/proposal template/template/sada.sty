@@ -1,0 +1,219 @@
+%===============================================================================
+% Stylefile für Bericht SADA
+% 
+% Dieses File ist aus dem File cmd.tex von Nico Karrer entstanden.
+% 
+% Hans-Georg Reiter
+% 01.02.2001
+%===============================================================================
+
+
+%-------------------------------------------------------------------------------
+% verwendete Packages
+%-------------------------------------------------------------------------------
+
+%\usepackage[english]{babel}
+%\usepackage[dvips]{graphicx}
+%\usepackage{graphicx}
+%\usepackage{epsfig}
+%\usepackage[latin1]{inputenc}       % Damit man nicht "a "u oder "o schreiben muss
+%\usepackage{amsfonts}               % spezielle Schriftarten für Formeln
+
+
+%-------------------------------------------------------------------------------
+% Seiteneinstellungen
+%-------------------------------------------------------------------------------
+
+\textwidth=17cm
+%\oddsidemargin=0cm
+%\evensidemargin=0cm
+%\topmargin=-1cm
+\textheight=24cm
+
+
+%-------------------------------------------------------------------------------
+% Neue Befehle
+%-------------------------------------------------------------------------------
+
+% write number and  SI unit. math mode
+\providecommand{\zunit}[2]{#1 \, \mathsf{#2}} 
+
+%-------------------------------------------------------------------------------
+
+% Anheben um eine halbe Zeile für Tabelle
+\providecommand{\zrb}[1]{\raisebox{1.5ex}[-1.5ex]{#1}}
+
+%-------------------------------------------------------------------------------
+
+% Einfügen Verweis auf Gleichung
+\providecommand{\zgl}[1]{Equation~(\ref{#1})}
+
+%-------------------------------------------------------------------------------
+
+% Einfügen Verweis auf Abbildung
+\providecommand{\zab}[1]{Figure~\ref{#1}}
+
+%-------------------------------------------------------------------------------
+
+% Einfügen Verweis auf Tabelle
+\providecommand{\ztb}[1]{Table~\ref{#1}}
+
+%-------------------------------------------------------------------------------
+
+% Einfügen Verweis auf Kapitel
+\providecommand{\zkp}[1]{Chapter~\ref{#1}}
+
+%-------------------------------------------------------------------------------
+
+% Einfügen Verweis auf Beispiel
+\providecommand{\zex}[1]{Example~\ref{#1}}
+
+%-------------------------------------------------------------------------------
+
+% Abkürzungen
+\providecommand{\ul}{\underline}
+\providecommand{\zdegree}{^{\circ}}
+\providecommand{\zdh}{\mbox{d.\,h.}\ }
+\providecommand{\zds}{\displaystyle}
+\providecommand{\zsgn}{\hspace{1ex} \mathsf{sgn} \hspace{1ex}}
+\providecommand{\zua}{\mbox{u.\,a.}\ }
+\providecommand{\zzb}{\mbox{z.\,B.}\ }
+
+
+%-------------------------------------------------------------------------------
+
+% Einfügen eines Beispiels
+\newcounter{z_example}[section]
+\providecommand{\zexample}[1]
+{
+  \stepcounter{z_example}
+  \vspace{0.5cm}
+  \subsubsection*{Beispiel \thesection.\arabic{z_example}: #1}
+}
+
+%-------------------------------------------------------------------------------
+
+% IFE Kopfzeile
+\newcommand{\ifehead}
+{
+  \begin{figure}[h]
+    \includegraphics[width=\linewidth]{Bilder/eth-head.eps}
+  \end{figure}
+}
+
+
+%-------------------------------------------------------------------------------
+% Environments
+%-------------------------------------------------------------------------------
+
+% Einfügen eines Hinweises kursiv und kleiner
+\newenvironment{zhint}
+{
+  \small
+  \em
+}
+{
+  \em
+  \normalsize
+}
+
+%-------------------------------------------------------------------------------
+
+% Beschriftung einer Legende
+\newenvironment{legende}
+{
+  \begin{list}{}
+  {
+    \setlength{\labelwidth}{2cm}
+    \setlength{\labelsep}{0.5em}
+    \setlength{\parsep}{0ex}
+    \setlength{\itemsep}{0ex}
+    \setlength{\leftmargin}{1.5cm}
+    \setlength{\rightmargin}{1.5cm}
+  }
+  \scriptsize
+}
+{
+  \end{list}
+}
+
+%-------------------------------------------------------------------------------
+% pagestyle Definitionen
+%-------------------------------------------------------------------------------
+
+% Definition der Kopf- und Fusszeilen
+\newcommand{\ps@sada}
+{
+  \renewcommand{\@oddhead}{\hfill\rightmark}%
+  \renewcommand{\@evenhead}{\leftmark\hfill}%
+  \renewcommand{\@oddfoot}{\hfill\thepage}%
+  \renewcommand{\@evenfoot}{\thepage\hfill}
+  \def\chaptermark##1{%
+    \markboth{%
+      \ifnum \c@secnumdepth >\m@ne
+        \thechapter\hspace{0.5em}
+      \fi
+      ##1}{%
+        \ifnum \c@secnumdepth >\m@ne
+          \thechapter\hspace{0.5em}
+        \fi
+        ##1}}
+  \def\sectionmark##1{%
+    \markright{%
+      \ifnum \c@secnumdepth >\m@ne
+        \thesection\hspace{0.5em}
+      \fi
+      ##1}}
+}
+
+
+\newcommand{\ps@sadachapter}
+{
+  \renewcommand{\@oddhead}{}%
+  \renewcommand{\@evenhead}{}%
+  \renewcommand{\@oddfoot}{\hfill\thepage}%
+  \renewcommand{\@evenfoot}{\thepage\hfill}
+  \def\chaptermark##1{%
+    \markboth{%
+      \ifnum \c@secnumdepth >\m@ne
+        \thechapter\hspace{0.5em}
+      \fi
+      ##1}{%
+        \ifnum \c@secnumdepth >\m@ne
+          \thechapter\hspace{0.5em}
+        \fi
+        ##1}}
+  \def\sectionmark##1{%
+    \markright{%
+      \ifnum \c@secnumdepth >\m@ne
+        \thesection\hspace{0.5em}
+      \fi
+      ##1}}
+}
+
+
+%-------------------------------------------------------------------------------
+
+
+\renewcommand\tableofcontents{%
+    \if@twocolumn
+      \@restonecoltrue\onecolumn
+    \else
+      \@restonecolfalse
+    \fi
+    \chapter*{\contentsname
+        \@mkboth{%
+           \contentsname}{\contentsname}}%
+    \@starttoc{toc}%
+    \if@restonecol\twocolumn\fi
+    }
+
+
+%-------------------------------------------------------------------------------
+
+
+%\renewcommand\chapter{\if@openright\cleardoublepage\else\clearpage\fi
+%                    \thispagestyle{sadachapter}%
+%                    \global\@topnum\z@
+%                    \@afterindentfalse
+%                    \secdef\@chapter\@schapter}

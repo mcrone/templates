@@ -1,0 +1,183 @@
+This is TeX, Version 3.14159 (Web2c 7.0) (format=tex 97.2.12)  28 SEP 1998 14:57
+**./ec.ins
+(./ec.ins
+Babel <French> and hyphenation patterns for italian, loaded.
+(/spr1opt1/share/texmf/tex/latex/base/docstrip.tex
+\blockLevel=\count26
+\emptyLines=\count27
+\processedLines=\count28
+\commentsRemoved=\count29
+\commentsPassed=\count30
+\codeLinesPassed=\count31
+\NumberOfFiles=\count32
+\TotalprocessedLines=\count33
+\TotalcommentsRemoved=\count34
+\TotalcommentsPassed=\count35
+\TotalcodeLinesPassed=\count36
+\inFile=\read0
+\inputcheck=\read1
+\@tempcnta=\count37
+\off@0=\count38
+\off@1=\count39
+\off@2=\count40
+\off@3=\count41
+\off@4=\count42
+\off@5=\count43
+\off@6=\count44
+\off@7=\count45
+\off@8=\count46
+\off@9=\count47
+\off@10=\count48
+\off@11=\count49
+\off@12=\count50
+\off@13=\count51
+\off@14=\count52
+\off@15=\count53
+\@temptokena=\toks12
+\@maxfiles=\count54
+\@maxoutfiles=\count55
+
+Utility: `docstrip' 2.4g <1996/12/13>
+English documentation    <1996/12/13>
+
+**********************************************************
+* This program converts documented macro-files into fast *
+* loadable files by stripping off (nearly) all comments! *
+**********************************************************
+
+********************************************************
+* No Configuration file found, using default settings. *
+********************************************************
+
+)
+*** Generating font defs for Cork encoded and Text Companion fonts ***
+
+File t1cmfib.fd already exists somewhere on the system.
+Overwrite it if necessary? [y/n]
+\answer=y
+
+File t1cmfr.fd already exists somewhere on the system.
+Overwrite it if necessary? [y/n]
+\answer=y
+
+File t1cmdh.fd already exists somewhere on the system.
+Overwrite it if necessary? [y/n]
+\answer=y
+
+File t1cmr.fd already exists somewhere on the system.
+Overwrite it if necessary? [y/n]
+\answer=y
+
+File t1cmss.fd already exists somewhere on the system.
+Overwrite it if necessary? [y/n]
+\answer=y
+
+File t1cmtt.fd already exists somewhere on the system.
+Overwrite it if necessary? [y/n]
+\answer=y
+
+File t1cmvtt.fd already exists somewhere on the system.
+Overwrite it if necessary? [y/n]
+\answer=y
+
+File ts1cmr.fd already exists somewhere on the system.
+Overwrite it if necessary? [y/n]
+\answer=y
+
+File ts1cmss.fd already exists somewhere on the system.
+Overwrite it if necessary? [y/n]
+\answer=y
+
+File ts1cmtt.fd already exists somewhere on the system.
+Overwrite it if necessary? [y/n]
+\answer=y
+
+File ts1cmvtt.fd already exists somewhere on the system.
+Overwrite it if necessary? [y/n]
+\answer=y
+
+Generating file(s) t1cmfib.fd t1cmfr.fd t1cmdh.fd t1cmr.fd t1cmss.fd t1cmtt.fd 
+t1cmvtt.fd ts1cmr.fd ts1cmss.fd ts1cmtt.fd ts1cmvtt.fd 
+\openout0 = `t1cmfib.fd'.
+
+\openout1 = `t1cmfr.fd'.
+
+\openout2 = `t1cmdh.fd'.
+
+\openout3 = `t1cmr.fd'.
+
+\openout4 = `t1cmss.fd'.
+
+\openout5 = `t1cmtt.fd'.
+
+\openout6 = `t1cmvtt.fd'.
+
+\openout7 = `ts1cmr.fd'.
+
+\openout8 = `ts1cmss.fd'.
+
+\openout9 = `ts1cmtt.fd'.
+
+\openout10 = `ts1cmvtt.fd'.
+
+
+Processing file cmfonts.fdd (fd,T1cmfib,ec) -> t1cmfib.fd
+                            (fd,T1cmfr,ec) -> t1cmfr.fd
+                            (fd,T1cmdh,ec) -> t1cmdh.fd
+                            (fd,T1cmr,ec) -> t1cmr.fd
+                            (fd,T1cmss,ec) -> t1cmss.fd
+                            (fd,T1cmtt,tt,ec,nowarn) -> t1cmtt.fd
+                            (fd,T1cmvtt,tt,ec) -> t1cmvtt.fd
+                            (fd,TS1cmr,ec) -> ts1cmr.fd
+                            (fd,TS1cmss,ec) -> ts1cmss.fd
+                            (fd,TS1cmtt,ec,tt) -> ts1cmtt.fd
+                            (fd,TS1cmvtt,ec,tt) -> ts1cmvtt.fd
+File cmfonts.fdd ended by \endinput.
+Lines  processed: 1281
+Comments removed: 548
+Comments  passed: 0
+Codelines passed: 424
+
+
+File t1lcmss.fd already exists somewhere on the system.
+Overwrite it if necessary? [y/n]
+\answer=y
+
+File t1lcmtt.fd already exists somewhere on the system.
+Overwrite it if necessary? [y/n]
+\answer=y
+
+Generating file(s) t1lcmss.fd t1lcmtt.fd 
+\openout0 = `t1lcmss.fd'.
+
+\openout1 = `t1lcmtt.fd'.
+
+
+Processing file slides.fdd (lcmss,fd,ec) -> t1lcmss.fd
+                           (lcmtt,fd,ec) -> t1lcmtt.fd
+File slides.fdd ended by \endinput.
+Lines  processed: 475
+Comments removed: 293
+Comments  passed: 0
+Codelines passed: 103
+
+***********************************************************
+*
+* To finish the installation you have to move the following
+* files into a directory searched by TeX:
+*
+*   All *.fd
+*
+* To produce the documentation run the files ending with
+* `.fdd' through LaTeX.
+*
+* Happy TeXing
+***********************************************************
+Overall statistics:
+Files  processed: 2
+Lines  processed: 1756
+Comments removed: 841
+Comments  passed: 0
+Codelines passed: 527
+ )
+No pages of output.

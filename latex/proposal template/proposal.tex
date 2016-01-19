@@ -1,0 +1,157 @@
+\documentclass[11pt,twoside]{article}
+\usepackage[a4paper, margin=2cm]{geometry}
+
+%\usepackage{template/ethfont}
+%\usepackage[isolatin]{inputenc}
+\usepackage{graphics}
+\usepackage[default]{sourcesanspro}
+\usepackage[T1]{fontenc}
+\usepackage[dvips]{graphicx}
+\usepackage{epsfig}
+\usepackage{fancyhdr}
+\usepackage{template/sada}
+\usepackage{gantt} 
+%\usepackage{german}
+\usepackage[]{hyperref}
+\usepackage[numbers,sort]{natbib}
+\usepackage{natbibspacing}
+\usepackage{bibentry}
+\hypersetup{pdftex,colorlinks=true,allcolors=black}
+\usepackage{hypcap}
+\usepackage{lscape}
+\usepackage{url}
+\usetikzlibrary{colorbrewer}
+\usepackage{sidecap}
+
+\usepackage{bookmark}
+\makeatletter
+\renewcommand\@seccntformat[1]{}
+\makeatother
+
+\usepackage{multicol}
+\usepackage{etoolbox}
+\usepackage{relsize}
+\patchcmd{\thebibliography}
+  {\list}
+  {\begin{multicols}{2}\list} 
+  {}
+  {}
+\appto{\endthebibliography}{\end{multicols}}
+
+\pagenumbering{arabic}
+\begin{document}
+\nobibliography*
+
+\DeclareGraphicsExtensions{.eps}
+
+
+%\graphicspath{{fig/}}      % where to look for pictures
+
+%\begin{table}[t]
+%  \begin{tabular}{l r}
+%    \begin{minipage}[c]{0.72\textwidth}
+%      \hspace{-4mm}
+%      \vspace{3mm}
+%    \end{minipage} &
+%    \begin{minipage}[r]{0.28\textwidth}
+%           \small Molecular and Cellular Bioengineering \\
+%           \small Michael Crone \\
+%    \end{minipage} \\
+%  \end{tabular}
+%\end{table}
+
+
+%% --- Defining the (sub-)class ---
+%\setlength{\textwidth}{16.5cm} \setlength{\marginparwidth}{1.5cm}
+%\setlength{\textheight}{24.5cm} \setlength{\oddsidemargin}{0cm}
+%\setlength{\evensidemargin}{\oddsidemargin}
+%\setlength{\topmargin}{0cm} \setlength{\headheight}{2cm}
+%\setlength{\headsep}{0.5cm} \setlength{\voffset}{-3cm}
+%\usepackage{ethfont}
+%\renewcommand{\familydefault}{\sfdefault}
+
+\setlength{\parindent}{0cm}
+\setlength{\parskip}{0.15ex}
+
+
+%\sloppy
+\thispagestyle{fancy}
+%\pagestyle{plain}
+\vspace{0.75cm}
+\begin{center}
+{\Large\textbf{MASTER'S THESIS PROPOSAL}\\
+\vspace{2.5cm}
+\hrule
+
+
+\thispagestyle{empty}
+
+\hrule
+\vspace{0.5cm}
+\LARGE{\textbf{Title}}
+ \vspace{0.5cm}
+\hrule
+}
+
+\vspace{1.5cm}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=0.4]{IC_Crest.eps}
+\end{figure}
+
+\vspace{1.5cm}
+
+\begin{center}
+\large{\bf{Department of Life Sciences\\Imperial College London\\London SW7 2AZ\\United Kingdom}}
+\end{center}
+
+\vspace{3.5cm}
+
+\begin{Large}
+\textbf{Name}\\
+\textbf{CID}
+\end{Large}
+
+\end{center}
+
+\newpage
+\clearpage
+\setcounter{page}{1}
+
+\section{Background}
+Synthetic biology is predicted to play a defining role in the evolution of the biological field in the $21^{st}$ century \cite{Voigt:2006kd}.
+
+\clearpage
+\newpage
+
+\bibliographystyle{naturemag}
+\bibliography{proposal}
+%\bibliography{xilinx,sa}
+
+\clearpage
+\newpage
+
+\begin{landscape}
+
+\section{Timetable and milestones}
+
+\begin{center}
+  \begin{gantt}[xunitlength=2cm]{5}{8}
+  	\begin{ganttitle}
+  	  \titleelement{Jan}{1}
+      \titleelement{Feb}{1}
+      \titleelement{Mar}{1}
+      \titleelement{Apr}{1}
+      \titleelement{May}{1}
+      \titleelement{Jun}{1}
+      \titleelement{Jul}{1}
+      \titleelement{Aug}{1}
+  	\end{ganttitle}
+    \ganttbar[color=Set1-5-1]{Proposal}{0}{0.8}
+  \end{gantt}
+\end{center}
+\end{landscape}
+
+
+\end{document}
